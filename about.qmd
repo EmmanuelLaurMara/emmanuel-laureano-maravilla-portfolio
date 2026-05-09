@@ -10,5 +10,5 @@ This website will show my projects, coursework, and some work in data science.
 
 This is my STAT 210 portfolio.
 
-```{}
+```         
 ```
