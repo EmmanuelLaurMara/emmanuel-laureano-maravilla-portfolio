@@ -23,12 +23,12 @@ TUITIONFEE_OUT: Tuition out of state
 STABBR: State 
 UGDS: number of undergraduates 
 
-##Data cleaning
+## Data cleaning
 
 The data was cleaning by slecting only the variable related to tuition and removing any missing values. A new variable called average tuition created by combing in state and out of state tuition. This made it easier to compare tuition across different colleges.
 
 
-##Visualization 1: Top 15 States by Tuition 
+## Visualization 2: Top 15 States by Tuition 
 This bar chart shows the top 15 states with the highest median average college tuition. The result shows that tuition varies significantly bu state with some states having much higher cost than other. This suggest that location plays an important role in college affordability.
 
 ```{r}
@@ -69,7 +69,7 @@ college_clean |>
 ```
 
 
-##Visualization 1: Distribution of Tuition
+## Visualization 1: Distribution of Tuition
 The histogram displays the distribution of average college tuition across all insitutions. Most of colleges fall within the moderate tuition range, while fewer institutions have very high tuition costs. This sow that highschool colege exist, they are less common compared to mid range tuition schools.
 
 ```{r}

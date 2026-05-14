@@ -25,6 +25,27 @@
     "href": "college-cost-analysis.html",
     "title": "College Cost Analysis",
     "section": "",
-    "text": "##Research Question: -How does college tuition varies in the United States?\n##Data Source Description: This project uses data from U.S department Education College Scorecard database. The dataset provides institution-level information on college across the United States, including tuition, institution type, and enrollment\n##Variables: INSTNM: Institution name CONTROL: Type of Institution TUITIONFEE_IN: Tuition in state TUITIONFEE_OUT: Tuition out of state STABBR: State UGDS: number of undergraduates\n##Data cleaning\nThe data was cleaning by slecting only the variable related to tuition and removing any missing values. A new variable called average tuition created by combing in state and out of state tuition. This made it easier to compare tuition across different colleges.\n##Visualization 1: Top 15 States by Tuition This bar chart shows the top 15 states with the highest median average college tuition. The result shows that tuition varies significantly bu state with some states having much higher cost than other. This suggest that location plays an important role in college affordability.\n\n\n\n\n\nTop 15 states with the highest median Average college tuition\n\n\n\n\n##Visualization 1: Distribution of Tuition The histogram displays the distribution of average college tuition across all insitutions. Most of colleges fall within the moderate tuition range, while fewer institutions have very high tuition costs. This sow that highschool colege exist, they are less common compared to mid range tuition schools.\n\n\n\n\n\nDistribution of average college tuition acorss institutions"
+    "text": "##Research Question: -How does college tuition varies in the United States?\n##Data Source Description: This project uses data from U.S department Education College Scorecard database. The dataset provides institution-level information on college across the United States, including tuition, institution type, and enrollment\n##Variables: INSTNM: Institution name CONTROL: Type of Institution TUITIONFEE_IN: Tuition in state TUITIONFEE_OUT: Tuition out of state STABBR: State UGDS: number of undergraduates"
+  },
+  {
+    "objectID": "college-cost-analysis.html#data-cleaning",
+    "href": "college-cost-analysis.html#data-cleaning",
+    "title": "College Cost Analysis",
+    "section": "Data cleaning",
+    "text": "Data cleaning\nThe data was cleaning by slecting only the variable related to tuition and removing any missing values. A new variable called average tuition created by combing in state and out of state tuition. This made it easier to compare tuition across different colleges."
+  },
+  {
+    "objectID": "college-cost-analysis.html#visualization-2-top-15-states-by-tuition",
+    "href": "college-cost-analysis.html#visualization-2-top-15-states-by-tuition",
+    "title": "College Cost Analysis",
+    "section": "Visualization 2: Top 15 States by Tuition",
+    "text": "Visualization 2: Top 15 States by Tuition\nThis bar chart shows the top 15 states with the highest median average college tuition. The result shows that tuition varies significantly bu state with some states having much higher cost than other. This suggest that location plays an important role in college affordability.\n\n\n\n\n\nTop 15 states with the highest median Average college tuition"
+  },
+  {
+    "objectID": "college-cost-analysis.html#visualization-1-distribution-of-tuition",
+    "href": "college-cost-analysis.html#visualization-1-distribution-of-tuition",
+    "title": "College Cost Analysis",
+    "section": "Visualization 1: Distribution of Tuition",
+    "text": "Visualization 1: Distribution of Tuition\nThe histogram displays the distribution of average college tuition across all insitutions. Most of colleges fall within the moderate tuition range, while fewer institutions have very high tuition costs. This sow that highschool colege exist, they are less common compared to mid range tuition schools.\n\n\n\n\n\nDistribution of average college tuition acorss institutions"
   }
 ]
