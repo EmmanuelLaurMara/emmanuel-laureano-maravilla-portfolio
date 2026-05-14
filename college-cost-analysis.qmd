@@ -39,11 +39,12 @@ Group data - I will group that data by year and institution type to analyze how 
 
 
 ```{r}
-library(tidyverse)
+
 #| echo: false
 #| message: false
 #| fig-cap: "Top 15 states with the highest median Average college tuition"
 #| fig-alt: "Horizontal bar chart showing the top 15 states with the highest average college tuition"
+ library(tidyverse)
 
 college <- read_csv("Most-Recent-Cohorts-Institution.csv")
 
