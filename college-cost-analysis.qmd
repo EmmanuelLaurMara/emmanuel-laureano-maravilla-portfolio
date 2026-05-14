@@ -13,7 +13,7 @@ execute:
 -How does college tuition varies in the United States?
 
 ##Data Source Description:
-This dataset for this project it going to be from the U.S department Education College Scorecard database. The dataset contains institution level information on college all through the U.S.
+This project uses data from U.S department Education College Scorecard database. The dataset provides institution-level information on college across the United States, including tuition, institution type, and enrollment
 
 ##Variables:
 INSTNM: Institution name
@@ -23,23 +23,13 @@ TUITIONFEE_OUT: Tuition out of state
 STABBR: State 
 UGDS: number of undergraduates 
 
-##Data Visualization
-The final product visualization will include a histogram graph. The histogram graph will show the distribution of average tuition in United States. 
-
-The visualization will show the trends in tuition over time and the difference in private and public. It will be labeled clearly and add different colors to the different categories.
-
-I think it will be better if the variables were to be cleaner and new variables possibly to show avg tuition. 
-
 ##Data cleaning
 
-Reformat Variables - Yes, some names need to become clearer
+The data was cleaning by slecting only the variable related to tuition and removing any missing values. A new variable called average tuition created by combing in state and out of state tuition. This made it easier to compare tuition across different colleges.
 
-Create New Variables- Yes, I will create new variables called avg tuition by combining both in and out of state tuition. For example, to combine both tuitions it will be (TUITIONFEE_IN + TUITIONFEE_OUT)/2
 
-Filter Data- Yes, I will need to keep the important variables that relate to data like tuition, institution type, and possibly enrollement. It will condense the data and make it easier to look at.
-
-Group data - I will group that data by year and institution type to analyze how tuition changes over time and prepare to visualization 
-
+##Visualization 1: Top 15 States by Tuition 
+This bar chart shows the top 15 states with the highest median average college tuition. The result shows that tuition varies significantly bu state with some states having much higher cost than other. This suggest that location plays an important role in college affordability.
 
 ```{r}
 #| echo: false
@@ -77,9 +67,10 @@ college_clean |>
 
 
 ```
-This is a rough draft of a bar chart showing the average college tuition across colleges. I cleaned data by removing missing values and created a new variable called avg tuition. It combines in and out of state tuition. This visualization shows how tuition varies depending on location of the institutions.
 
 
+##Visualization 1: Distribution of Tuition
+The histogram displays the distribution of average college tuition across all insitutions. Most of colleges fall within the moderate tuition range, while fewer institutions have very high tuition costs. This sow that highschool colege exist, they are less common compared to mid range tuition schools.
 
 ```{r}
 #| echo: false
