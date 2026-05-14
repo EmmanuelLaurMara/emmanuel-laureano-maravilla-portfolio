@@ -37,7 +37,6 @@ Group data - I will group that data by year and institution type to analyze how 
 
 
 ```{r}
-
 #| echo: false
 #| message: false
 #| warning: false
@@ -79,7 +78,10 @@ This is a rough draft of a bar chart showing the average college tuition across 
 
 
 
-```{r, echo=FALSE}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
 #| fig-cap: "Distribution of average college tuition acorss institutions"
 #| fig-alt: "Histogram showing how average college tuition is distrbiuted arcoss colleges "
 college_clean |>
