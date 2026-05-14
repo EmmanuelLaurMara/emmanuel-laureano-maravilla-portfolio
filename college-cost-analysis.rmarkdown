@@ -1,0 +1,90 @@
+---
+title: "College Cost Analysis"
+author: "Emmanuel Laureano-Maravilla"
+format: html
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+---
+
+##Research Question:
+-How does college tuition varies in the United States?
+
+##Data Source Description:
+This project uses data from U.S department Education College Scorecard database. The dataset provides institution-level information on college across the United States, including tuition, institution type, and enrollment
+
+##Variables:
+INSTNM: Institution name
+CONTROL: Type of Institution
+TUITIONFEE_IN: Tuition in state
+TUITIONFEE_OUT: Tuition out of state
+STABBR: State 
+UGDS: number of undergraduates 
+
+##Data cleaning
+
+The data was cleaning by slecting only the variable related to tuition and removing any missing values. A new variable called average tuition created by combing in state and out of state tuition. This made it easier to compare tuition across different colleges.
+
+
+##Visualization 1: Top 15 States by Tuition 
+This bar chart shows the top 15 states with the highest median average college tuition. The result shows that tuition varies significantly bu state with some states having much higher cost than other. This suggest that location plays an important role in college affordability.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Top 15 states with the highest median Average college tuition"
+#| fig-alt: "Horizontal bar chart showing the top 15 states with the highest average college tuition"
+library(tidyverse)
+
+college <- read_csv("Most-Recent-Cohorts-Institution.csv", show_col_types = FALSE)
+
+college_clean <- college |>
+  select(INSTNM, CONTROL, TUITIONFEE_IN, TUITIONFEE_OUT, STABBR, UGDS) |>
+  filter(
+    !is.na(TUITIONFEE_IN),
+    !is.na(TUITIONFEE_OUT),
+    !is.na(STABBR)
+  ) |>
+  mutate(
+    avg_tuition = (TUITIONFEE_IN + TUITIONFEE_OUT) / 2
+  )
+
+college_clean |>
+  group_by(STABBR) |>
+  summarize(median_tuition = median(avg_tuition, na.rm = TRUE)) |>
+  slice_max(median_tuition, n = 15) |>
+    ggplot(aes(x = reorder(STABBR, median_tuition), y = median_tuition)) +
+      geom_col() +
+    coord_flip() +
+      labs(
+        title = "Top 15 Average College Tuition ",
+        x = "State", 
+        y = "Average Tuition"
+      )
+
+
+```
+
+
+##Visualization 1: Distribution of Tuition
+The histogram displays the distribution of average college tuition across all insitutions. Most of colleges fall within the moderate tuition range, while fewer institutions have very high tuition costs. This sow that highschool colege exist, they are less common compared to mid range tuition schools.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-cap: "Distribution of average college tuition acorss institutions"
+#| fig-alt: "Histogram showing how average college tuition is distrbiuted arcoss colleges "
+college_clean |>
+  ggplot(aes(x = avg_tuition)) + 
+  geom_histogram(fill = "steelblue", bins = 30) +
+  labs(title = "Distribution of Average College Tuition",
+       x = "Average Tuition",
+       y = "Number of Colleges") +
+  theme_minimal()
+
+```
+
