@@ -11,7 +11,8 @@ website:
         text: Home
       - href: about.qmd
         text: About Me
-
+      - href:  college-cost-analysis.qmd
+        text: "College Cost Analysis"
 format:
   html:
     theme:
