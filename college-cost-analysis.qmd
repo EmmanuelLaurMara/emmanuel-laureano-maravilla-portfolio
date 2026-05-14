@@ -2,6 +2,11 @@
 title: "College Cost Analysis"
 author: "Emmanuel Laureano-Maravilla"
 format: html
+execute:
+  echo: false
+  message: false
+  warning: false
+---
 ---
 
 ##Research Question:
