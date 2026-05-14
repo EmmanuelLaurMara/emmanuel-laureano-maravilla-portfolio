@@ -34,9 +34,13 @@ Create New Variables- Yes, I will create new variables called avg tuition by com
 Filter Data- Yes, I will need to keep the important variables that relate to data like tuition, institution type, and possibly enrollement. It will condense the data and make it easier to look at.
 
 Group data - I will group that data by year and institution type to analyze how tuition changes over time and prepare to visualization 
+```{r}
+#| echo: false
+ library(tidyverse)
 
 
 
+```
 
 ```{r}
 
@@ -44,7 +48,6 @@ Group data - I will group that data by year and institution type to analyze how 
 #| message: false
 #| fig-cap: "Top 15 states with the highest median Average college tuition"
 #| fig-alt: "Horizontal bar chart showing the top 15 states with the highest average college tuition"
- library(tidyverse)
 
 college <- read_csv("Most-Recent-Cohorts-Institution.csv")
 
